@@ -1,0 +1,54 @@
+{
+  "name": "@skoncar/lens-pi-agent",
+  "version": "0.1.0",
+  "description": "Adds pi, the minimal terminal coding agent harness, to Lens's AI tools.",
+  "license": "MIT",
+  "author": "skoncar",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koncar/lens-pi-agent.git"
+  },
+  "homepage": "https://github.com/koncar/lens-pi-agent#readme",
+  "bugs": {
+    "url": "https://github.com/koncar/lens-pi-agent/issues"
+  },
+  "keywords": [
+    "lens-extension",
+    "pi",
+    "ai",
+    "coding-agent"
+  ],
+  "type": "commonjs",
+  "main": "./dist/index.js",
+  "files": [
+    "dist",
+    "assets",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "lensExtension": {
+    "icon": "assets/icon.svg",
+    "banner": "assets/banner.svg"
+  },
+  "scripts": {
+    "build": "lens-types-check && lens-package-build --entry-point ./src/index.ts",
+    "clean": "rimraf dist/"
+  },
+  "dependencies": {
+    "@k8slens/ai-tools-contracts": "^1.0.4",
+    "@k8slens/electron-contracts": "^1.0.4",
+    "@k8slens/element-components": "^3.9.0",
+    "@k8slens/feature-core": "^7.5.2",
+    "@k8slens/icon": "^4.0.0",
+    "@k8slens/injectable": "^26.2.1",
+    "@k8slens/stylesheet-contracts": "^1.0.0",
+    "@k8slens/use-inject": "^1.0.2",
+    "react": "^19.2.0"
+  },
+  "devDependencies": {
+    "@k8slens/package-build": "^3.0.0",
+    "@k8slens/typescript": "^8.0.0",
+    "@types/react": "^19.2.0",
+    "rimraf": "^4.4.1"
+  }
+}
